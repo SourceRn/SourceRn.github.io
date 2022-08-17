@@ -1,0 +1,211 @@
+*{
+    padding: 0;
+    margin: auto 0;
+}
+
+body{
+    background-color: #E3D8F1;
+}
+
+#square_to_left{
+    margin-left: 15%;
+    margin-top: 4%;
+    float: left;
+    text-align: center;
+    background-color: #E3D8F1;
+    border-radius: 20px;
+}
+    #texto_encriptar{
+        position: absolute;
+        margin-left: 3%;
+        background-color: #E3D8F1;
+        font-size: 36px;
+        width: 350px;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: justify;
+        resize: none;
+		border: none;
+		overflow:auto;
+        outline: none;
+    }
+    #buttons_container{
+        position: absolute;
+        margin-left: 3%;
+        margin-top: 20%;
+    }
+        .buttons{
+            margin: 20px;
+            border: none;
+            padding: 20px;
+            border-radius: 20px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        #btn_encriptar{
+            background-color: #FFD23F;
+            color: black;
+        }
+        #btn_copiar{
+            position: relative;
+            background-color: #FFD23F;
+            margin-left: 360px;
+            margin-top: 700px;
+            width: 200px;
+            display: none;
+        }
+
+#square_to_right{
+    display: flex;
+    margin-right: 7%;
+    margin-top: 4%;
+    height: 800px;
+    width: 600px;
+    float: right;
+    background-color: aliceblue;
+    border-radius: 20px;
+    font-size: 36px;
+}
+    #text_square{
+        text-align: center;
+        display: flex;
+        width: 500px;
+        height: 600px;
+        margin-left: 5%;
+        margin-top: 2%;
+        font-size: 24px;
+        position: absolute;
+    }
+
+    #img_text{
+        margin-left: -10%;
+        margin-bottom: -5%;
+        position: relative;
+    }
+
+@media screen and (max-width: 1310px){
+    #square_to_right{
+        width: 400px;
+    }
+    #text_square{
+        width: 400px;
+    }
+    #img_text{
+        width: 400px;
+        margin-left: -12%;
+        margin-bottom: 30px;
+    }
+    #btn_copiar{
+        margin-left: 250px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #square_to_left{
+        margin-left: 5%;
+    }
+    #text_square{
+        width: 500px;
+    }
+    #square_to_right{
+        width: 500px;
+    }
+    #img_text{
+        width: 400px;
+        margin-left: -5%;
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 1050px){
+    #square_to_right{
+        margin-top: 40%;
+        margin-right: 18%;
+        height: 400px;
+        width: 600px;
+    }
+    
+    #text_square{
+        width: 600px;
+    }
+    #img_text{
+        width: 350px;
+        margin-left: 15%;
+        margin-bottom: 300px;
+    }
+    #square_to_left{
+        margin-left: 25%;
+    }
+    #btn_copiar{
+        margin-top: 52%;
+        margin-left: 350px;
+        height: 70px;
+    }
+
+}
+
+@media screen and (max-width: 850px){
+    #square_to_right{
+        margin-right: 30%;
+        height: 400px;
+        width: 400px;
+    }
+    #text_square{
+        width: 400px;
+    }
+    #img_text{
+        width: 350px;
+        margin-left: -5%;
+        margin-bottom: 300px;
+    }
+    #square_to_left{
+        margin-left: 10%;
+    }
+    #btn_copiar{
+        margin-top: 80%;
+        margin-left: 280px;
+        height: 70px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    #square_to_right{
+        margin-top: 60%;
+        margin-right: 10%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #square_to_right{
+        margin-right: 0%;
+    }
+    #square_to_left{
+        margin-left: 0%;
+    }
+    .buttons{
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #square_to_left{
+        margin-left: 5%;
+    }
+    #square_to_right{
+        margin-top: 80%;
+        margin-right: 10%;
+        width: 300px;
+    }
+    #text_square{
+        width: 300px;
+    }
+    #img_text{
+        width: 300px;
+        margin-left: -4%;
+        margin-bottom: 300px;
+    }
+    #btn_copiar{
+        margin-top: 105%;
+        margin-left: 200px;
+        height: 70px;
+    }
+}
