@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <!-- referencias a css-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="src/css/cssIndex.css">
+    <link rel="shortcut icon" href="src/images/index/MiLogo.png" type="image/x-icon">
+    <link rel="stylesheet" href="src/css/cssReto.css">
+    <!--Css para Correcion del menu-->
+  <link rel="stylesheet" href="src/css/responsive.css">
+</head>
+<header>
+        <!-- cambiar el color de la barra de menu-->
+       <!-- inicia menu-->  <nav id="menu" class="navbar navbar-expand-lg navbar-dark" style="background-color: #0A66C6;" >
+       
+  
+    <div class="container-fluid">
+      <a  class="navbar-brand" href="index.html"><img src="src/images/index/MiLogo.png" width="100px" id="imgNavBar"><b id="titNavbar"> EXANI II MATEMÁTICAS</b> </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+           <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html"><b>Inicio</b></a>
+          </li>
+         
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <b>Contenido</b>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item separation"><b>Razonamiento aritmético:</b></a></li>
+          <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="jerarquia.html"><b>Jerarquía de operaciones</b></a></li>
+          <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="operacionescomb.html"><b>Operaciones combinadas de suma, resta, multiplicacion y division con numeros enteros</b></a></li>
+          <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="problemascon.html"><b>Problemas con suma, resta, multiplicacion y division con numeros decimales y fracciones</b>b></a>
+          <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item separation"><b>Razonamiento algebraico:</b></a>
+          <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="expresiones.html"><b>Expresiones algebraicas</b></a>
+          <li><hr class="dropdown-divider"></li>
+
+                <li><a class="dropdown-item retobtn" href="reto.html"><b>Reto de aprendizajes</b></a></li>
+            </ul>
+          </li>
+        </ul>
+      
+      </div>
+    </div>
+  </nav><!-- termina menu--> 
+</header>
+<body style=" background-image: url(src/images/reto/fondoreto.png);">
+
+<BR>
+<BR>
+    <!-- titulo principal -EXANII II MATEMATICAS-->
+             <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <H1 style="text-align: center;" > <br>SUBTEMA 1. JERARQUIA DE OPERACIONES <br>
+                              "Operaciones combinadas de suma, resta,<br> multiplicación y división con numeros enteros"<br> <br> </H1>
+                        </div>
+                    </div>
+            </div>
+
+<BR>
+   
+
+
+    <div  class="container">  <!-- comienza container--> 
+    <hr SIZE="8px" > <!-- salto de parrafo--><!-- se puede cambiar color y tamaño-->
+    <div id="caja1" class="row">
+        <div class="col-md-12" >
+          <header> <center><H2>ACTIVIDAD</H2></center>
+            <center> <p class="titulo"><b>Realiza los siguientes ejercicios con atencion y coloca la respuesta que consideres correcta, en caso de no saber puedes regresar a repasar el tema o ver la solucion del problema asi como repetir la actividad las veces que sea necesario.
+            </b></p> </center> <br>
+            
+          </header>
+            
+            </div>
+        </div>
+<br><br>
+
+            
+                <section>
+                        <form name="formAct1"  onsubmit="return validarRespuestasAct1()">
+                          
+                            <h3>  1.	9+6^2-2*8 = </h3> <br> 
+                                <input type="radio" name="eje1" value="a"> a. 26     <br>    
+                        
+                                <input type="radio" name="eje1" value="b"> b. 30    <br>     
+                    
+                                <input type="radio" name="eje1" value="c"> c. 29     <br>       
+    
+                                <input type="radio" name="eje1" value="d"> d. 27    <br>     
+                                 <br>
+                                 <!-- Boton de la explicacion-->
+                                   <button id="btnProced1" hidden type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                    <b>Procedimiento</b>
+                                   </button>
+  
+                                 <!-- metodo para desplegar la informacion -->
+                                 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                 <div class="modal-dialog">
+                                 <div class="modal-content">
+                                 <div class="modal-header">
+                                 <h5 class="modal-title" id="exampleModalLabel">Procedimiento</h5>
+                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                  </div>
+                                 <div class="modal-body">
+                                   <h6><b>Según la Jerarquía de Operaciones:
+                                    Primero resolvemos los exponentes y potencias.</b>
+                                    <br>
+                                    9+6^2−2⋅8
+                                   <br> 
+                                    =9+(6⋅6)−2⋅8
+                                    <br>
+                                    <b>Despues resolvemos las multiplicaciones y divisiones </b><br>
+                                     
+                                     =9+36−2⋅8
+                                     <br>
+                                     <b>Por último, hacemos las sumas y restas</b>
+                                     <br>
+                                     =9+36−16
+                                    <br> 
+                                     =45−16
+                                     <br>
+                                     =29</h6>
+                                  </div>
+                                <div class="modal-footer">
+                                    <a href="operacionescomb.html" role="button" class="btn btn-primary popover-test">Repasar el Tema</a>
+                                 <button type="button" class="btn btn-success" data-bs-dismiss="modal">Continuar con la Actividad</button>
+                                </div>
+                                </div>
+                                </div>
+                                </div>
+                                <br>
+                                <br>
+                            <h3> 2.  <img src="src/images/tema1act/tema1preg2img1.png"> =</h3><br>
+                                <input type="radio" name="eje2" value="a"> a. -56     <br>
+                        
+                                <input type="radio" name="eje2" value="b"> b. 64     <br>
+                        
+                                <input type="radio" name="eje2" value="c"> c. 56     <br>
+        
+                                <input type="radio" name="eje2" value="d"> d. 46     <br>
+                                <br>
+                                <!-- Boton de la explicacion-->
+                                <button id="btnProced2" hidden type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                                    <b>Procedimiento</b>
+                                   </button>
+  
+                                 <!-- metodo para desplegar la informacion -->
+                                 <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+                                 <div class="modal-dialog">
+                                 <div class="modal-content">
+                                 <div class="modal-header">
+                                 <h5 class="modal-title" id="exampleModalLabel2">Procedimiento</h5>
+                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                  </div>
+                                 <div class="modal-body">
+                                    <img src="src/images/tema1act/tema1preg2img1.png"> =
+                                    <h6><br><b>Primero resolvemos las multiplicaciones y después las sumas en el interior de los paréntesis</b>
+                                    <br>
+                                    <br>
+                                    <img src="src/images/tema1act/tem1preg2img2.png"> =
+                                    <img src="src/images/tema1act/tem1preg2img3.png"> 
+                                    <h6><br><b>Realizamos las multiplicaciones y después las sumas en el interior de los 
+                                    Paréntesis</b>
+                                    <br><br>
+                                    <img src="src/images/tema1act/tem1preg2img4.png" style="width: 100%">
+                                    </h6><br><br>
+
+                                    
+
+                                  </div>
+                                <div class="modal-footer">
+                                    <a href="operacionescomb.html" role="button" class="btn btn-primary popover-test">Repasar el Tema</a>
+                                 <button type="button" class="btn btn-success" data-bs-dismiss="modal">Continuar con la Actividad</button>
+                                </div>
+                                </div>
+                                </div>
+                                </div>
+                                <br>
+                                <br>
+                            <h3> 3.	[(17-15)^3+(7-12)^2]:[(6-7)*(12-23)] =    </h3><br>
+                                <input type="radio" name="eje3" value="a"> a. 3    <br>
+                            
+                                <input type="radio" name="eje3" value="b"> b. 5     <br>
+                            
+                                <input type="radio" name="eje3" value="c"> c. 17     <br>
+            
+                                <input type="radio" name="eje3" value="d"> d. -5     <br>
+                                <br>
+                                <!-- Boton de la explicacion-->
+                                <button id="btnProced3" hidden type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal3">
+                                    <b>Procedimiento</b>
+                                   </button>
+  
+                                 <!-- metodo para desplegar la informacion -->
+                                 <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel3" aria-hidden="true">
+                                 <div class="modal-dialog">
+                                 <div class="modal-content">
+                                 <div class="modal-header">
+                                 <h5 class="modal-title" id="exampleModalLabel3">Procedimiento</h5>
+                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                  </div>
+                                 <div class="modal-body">
+                                  <img src="src/images/tema1act/tem1preg3img1.png">
+                       
+                                  </div>
+                                <div class="modal-footer">
+                                    <a href="operacionescomb.html" role="button" class="btn btn-primary popover-test">Repasar el Tema</a>
+                                 <button type="button" class="btn btn-success" data-bs-dismiss="modal">Continuar con la Actividad</button>
+                                </div>
+                                </div>
+                                </div>
+                                </div>
+                                <br>
+                                <br>
+                            <h3> 4. 7*3+[6+2*(2^3:4+3*2)-7*2]+9:3 =  </h3><br> 
+                                <input type="radio" name="eje4" value="a"> a. 35    <br>
+                        
+                                <input type="radio" name="eje4" value="b"> b. -33     <br>
+                        
+                                <input type="radio" name="eje4" value="c"> c. 32    <br>
+        
+                                <input type="radio" name="eje4" value="d"> d. 50     <br>
+                                <br><!-- Boton de la explicacion-->
+                                <button id="btnProced4" hidden type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal4">
+                                 <b>Procedimiento</b>
+                                </button>
+
+                              <!-- metodo para desplegar la informacion -->
+                              <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel4" aria-hidden="true">
+                              <div class="modal-dialog">
+                              <div class="modal-content">
+                              <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel4">Procedimiento</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                               </div>
+                              <div class="modal-body">
+                                <h6><br><b>Quitamos paréntesis interiores realizando primero las multiplicaciones y divisiones, y despues realizamos las sumas y restas.
+                                  Repetimos este proceso hasta que ya no queden paréntesis.
+                                  </b>
+                                  <br><br>
+                                  <img src="src/images/tema1act/tem1preg4img1.png" style="width: 100%;">
+                                  </h6><br><br>
+                               </div>
+                             <div class="modal-footer">
+                                 <a href="operacionescomb.html" role="button" class="btn btn-primary popover-test">Repasar el Tema</a>
+                              <button type="button" class="btn btn-success" data-bs-dismiss="modal">Continuar con la Actividad</button>
+                             </div>
+                             </div>
+                             </div>
+                             </div>
+                             <br>
+                             <br>
+                            <h3> 5.	14-{7+4*3-[(-2)^2*2-6)]}+(2^2+6-5*3)+3-(5-2^3:2)=   </h3> <br>
+                                <input type="radio" name="eje5" value="a"> a. 5    <br>
+                            
+                                <input type="radio" name="eje5" value="b"> b. 6     <br>
+                            
+                                <input type="radio" name="eje5" value="c"> c. 3     <br>
+            
+                                <input type="radio" name="eje5" value="d"> d. -6     <br>
+                             <br>
+                             <!-- Boton de la explicacion-->
+                             <button id="btnProced5" hidden type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal5">
+                                <b>Procedimiento</b>
+                               </button>
+
+                             <!-- metodo para desplegar la informacion -->
+                             <div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel5" aria-hidden="true">
+                             <div class="modal-dialog">
+                             <div class="modal-content">
+                             <div class="modal-header">
+                             <h5 class="modal-title" id="exampleModalLabel5">Procedimiento</h5>
+                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                              </div>
+                             <div class="modal-body">
+                              <img src="src/images/tema1act/tem1preg5img1.png" style="width: 100%;">
+                              </div>
+                            <div class="modal-footer">
+                                <a href="operacionescomb.html" role="button" class="btn btn-primary popover-test">Repasar el Tema</a>
+                             <button type="button" class="btn btn-success" data-bs-dismiss="modal">Continuar con la Actividad</button>
+                            </div>
+                            </div>
+                            </div>
+                            </div>
+                            <br>
+                            <br>
+                            
+
+                            <div id="resultado"></div>
+                          <center><input class="btn btn-primary btn-lg " type="submit" value="Revisar la Actividad"></input></b>
+                              
+                        </form>
+                        <div id="Temas" class="col-md-12 card-body d-flex justify-content-between align-items-center">
+                   
+                          <!-- botones-->
+                          <a id="repasar" hidden href="operacionescomb.html" class="btn btn-primary btn-lg btns" text-align="center"; tabindex="-1" role="button" aria-disabled="true"><center><b>Repasar el Tema</center></b></a>
+                
+                          <a id="reiniciar" hidden href="actividad1.html" class="btn btn-primary btn-lg btns"  tabindex="-1" role="button" aria-disabled="true"><b>Reiniciar la Actividad</b></a>
+                               
+                                     <!-- btn-outline-dark es el contorno del boton--> <!--style="background-color: black;" cambia el color del boton -->
+                          </div>
+                          <hr SIZE="8px" ><!-- salto de parrafo--><!-- se puede cambiar color y tamaño-->
+                          <div class="row " > 
+                            <!--<center><h2 class="titulo"><b> texto alternativo </b></H2> </center><br><br>-->
+                                     
+                                     
+                              <div id="Temas" class="col-md-12 card-body d-flex justify-content-between align-items-center">
+                                     
+                                      <!-- botones-->
+                  
+                                          <a href="operacionescomb.html" class="btn btn-primary btn-lg btns" id="inicio" hidden><b><b>Anterior</b></a>
+                                                                                                  <!-- float-right se utiliza para que se posicione el boton a la derecha -->
+                                          <a href="problemascon.html" class="btn btn-primary btn-lg  float-right btns" id="siguiente" hidden><b>Siguiente tema</b></a>
+                                                                  <!-- btn-outline-dark es el contorno del boton--> <!--style="background-color: black;" cambia el color del boton -->
+                                      </div>
+                          </div>
+                </section>         <!-- y asi sucesivamente conforme el numero de preguntas-->
+                         
+        </div>
+
+        
+       <hr SIZE="8px" >
+        
+       <nav aria-label="Page navigation example" id="bottomNav">
+        <ul class="pagination justify-content-center">
+          <li class="page-item">
+            <a class="page-link" href="index.html">Inicio</a>
+          </li>
+          <li class="page-item"><a class="page-link" href="jerarquia.html">Tema 1</a></li>
+          <li class="page-item"><a class="page-link" href="arrastar.html">Actividad 1</a></li>
+          <li class="page-item"><a class="page-link" href="operacionescomb.html">Tema 2</a></li>
+          <li class="page-item"><a class="page-link" href="actividad1.html">Actividad 2</a></li>
+          <li class="page-item"><a class="page-link" href="problemascon.html">Tema 3</a></li>
+          <li class="page-item"><a class="page-link" href="actividad2.html">Actividad 3</a></li>
+          <li class="page-item"><a class="page-link" href="expresiones.html">Tema 4</a></li>
+          <li class="page-item"><a class="page-link" href="testMemorama.html">Actividad 4</a></li>
+          <li class="page-item">
+            <a class="page-link" href="reto.html">Reto</a>
+          </li>
+        </ul>
+      </nav>
+ </div> <!-- termina container-->
+
+</body>
+    <script src="src/js/validacionAct1.js"></script>
+    <script src="src/js/responsiveNavbar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</html>

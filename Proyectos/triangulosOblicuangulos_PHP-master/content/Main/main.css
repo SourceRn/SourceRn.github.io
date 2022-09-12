@@ -1,0 +1,195 @@
+#main{
+    margin-top: 150px;
+}
+
+#mainContent_content{
+    text-align: center;
+}
+
+.mainContent_title{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.rectangle{
+    display: block;
+    width: 100%;
+    height: 15px;
+    background-color:coral;
+}
+
+.mainContent_section{
+    float: left;
+    display: block;
+    width: 400px;
+    margin-bottom: 200px;
+}
+#mainContent_first-section{
+    margin-left: 26%;
+}
+#mainContent_second-section{
+    margin-left: 3%;
+}
+
+.mainContent_popUp-resolve{
+    font-size: 18px;
+    font-weight: bold;
+    color: blue;
+    cursor: pointer;
+}
+.mainContent_popUp-resolve:hover{
+    color: #3B60E4;
+}
+
+@media screen and (max-width: 1280px) {
+    #mainContent_first-section{
+        margin-left: 20%;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    #mainContent_first-section{
+        margin-left: 10%;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    #mainContent_first-section{
+        margin-left: 30%;
+    }
+    #mainContent_second-section{
+        margin-left: 30%;
+        margin-top: 10%;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    #mainContent_first-section{
+        margin-left: 22%;
+    }
+    #mainContent_second-section{
+        margin-left: 22%;
+        margin-top: 10%;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    #mainContent_first-section{
+        margin-left: 10%;
+    }
+    #mainContent_second-section{
+        margin-left: 10%;
+        margin-top: 10%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    #mainContent_first-section{
+        margin-left: 15%;
+        width: 300px;
+    }
+    #mainContent_second-section{
+        margin-left: 15%;
+        margin-top: 10%;
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #mainContent_first-section{
+        margin-left: 10%;
+        width: 300px;
+    }
+    #mainContent_second-section{
+        margin-left: 10%;
+        margin-top: 10%;
+        width: 300px;
+    }
+    #imgTriangulos{
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    #mainContent_first-section{
+        margin-left: 20%;
+        width: 200px;
+    }
+    #mainContent_second-section{
+        margin-left: 20%;
+        margin-top: 10%;
+        width: 200px;
+    }
+    #imgTriangulos{
+        width: 100px;
+    }
+}
+
+#popUp_resolverTriangle{
+    display: none;
+    width: 600px;
+    height: 800px;
+    background-color: #9EF8EE;
+    margin-left: 35%;
+    margin-top: 10%;
+    position: absolute;
+    border-radius: 20px;
+    animation: appearResolver_Triangle;
+    animation-duration: 1s;
+}
+#white_line{
+    width: 100%;
+    background-color: #FA7F08;
+    height: 80px;
+    border-radius: 20px;
+}
+
+#closeIcon_resolveTriangle{
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.title_window_resolveTriangle{
+    padding-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#formContainer{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#input_lados{
+    float: left;
+    margin-right: 100px;
+    margin-left: 30px;
+}
+#input_angulos{
+    float: left;
+}
+#btn_resolverTriangle{
+    margin-top: 50px;
+    clear:left;
+    background-color: #FA7F08;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    width: 200px;
+    margin-left: 34%;
+    cursor: pointer;
+}
+#btn_resolverTriangle:hover{
+    background-color: #F29F05;
+}
+
+@keyframes appearResolver_Triangle {
+    from {
+        margin-left: -100%;
+    } to {
+        margin-left: 35%;
+    }
+}

@@ -1,0 +1,102 @@
+.imgJerarquia{
+    margin-left: 10%;
+    cursor: pointer;
+}
+
+#titOpt{
+    display:flex;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #FFF1D0;
+}
+
+.imgSquares{
+    text-align: center;
+}
+
+.bigTitleSpace{
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bolder;
+}
+.smallTitleSpace{
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bolder;
+}
+
+    #titleSpace1{
+        background-color: #06AED5;
+    }
+    #titleSpace2{
+        background-color:#F0C808;
+    }
+    #titleSpace3{
+        background-color: #086788;
+    }
+    #titleSpace4{
+        background-color: #DD1C1A;
+    }
+
+.imgStyles{
+    margin: 2%;
+}
+
+.cursorPointer{
+    cursor: pointer;
+}
+
+.optImageAnimationDisappear{
+    animation-duration: .3s;
+    animation-name: giroImg-Disappear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes giroImg-Disappear {
+    from {
+        transform: none;
+        opacity: 1;
+    } to {
+        transform: rotate(360deg);
+        opacity: .0001;
+    }
+}
+
+.optImageAnimationAppear{
+    animation-duration: .3s;
+    animation-name: giroImg-Appear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes giroImg-Appear {
+    from {
+        transform: rotate(360deg);
+        opacity: .0001;
+    } to {
+        transform: none;
+        opacity: 1;
+    }
+}
+
+#btnDeshacer{
+    display: flex;
+    background-color: red;
+    width: 100px;
+    height: 30px;
+    justify-content: center;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    transition: all .5s;
+}
+
+#btnDeshacer:hover{
+    font-size: 20px;
+    font-weight: bolder;
+    width: 150px;
+    height: 40px;
+    transition: all .5s;
+}

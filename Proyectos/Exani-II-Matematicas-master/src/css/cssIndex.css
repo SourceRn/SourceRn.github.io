@@ -1,0 +1,83 @@
+* {
+    padding: 0;
+    margin: 0px;
+}
+/*color blanco del container reto*/
+section{
+background-color: white;
+padding: 10px;
+}
+#caja1, #temas{
+    background-color: white;
+  }
+H1{
+    /*aplicar color al fondo de la etiqueta */
+    background-color: #8CC63F;
+    font-size: xx-large;
+    color: black;
+    font-weight: bold;
+    font-family: 'FUTRFW','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#tituloinicio{
+    font-size: x-large;
+    text-align: justify;
+}
+/*parrafo principal*/
+#textoinicio{
+    /*tamaño de letra*/
+    font-size: large;
+}
+.titulo{
+    font-size: x-large;
+}
+
+/* fuentes---------------------------------------------------------------------------------*/
+
+/*PARA CAMBIAR EL FONT, DESCARGAR Y AGREGAR EL NUEVO FONT A 
+src/fonts Y LUEGO MODIFICAR EL NOMBRE "FUTRFW.TTF" POR EL DE LA NUEVA 
+FONT ---------- POR AHORA SE DESABILITARA ESTA OPCION DEL FONT ------
+--------------- CUESTIONES DE FRONT - END ---------------------------*/
+
+/*
+@font-face{
+    font-family: 'FUTRFW';
+       src:url('/src/fonts/FUTRFW.TTF');
+       
+   }
+   */
+  
+#menu{
+    font-family: 'FUTRFW', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+/*
+#temsBtns{
+    display: flex;
+    width: 50%;
+    justify-content: center;
+}
+.btnJerarquia{
+    display: inline-block;
+    margin:auto;
+}
+*/
+
+.retobtn{
+    background-color: blue;
+    color: white;
+}
+.retobtn:hover{
+    background-color: blue;
+    color: grey;
+}
+#retobtn{
+    background-color: blue;
+    color: white;
+}
+#retobtn:hover{
+    background-color: blue;
+    color: grey;
+}
+
+.temsSeparation:hover{
+    background-color: black;
+}

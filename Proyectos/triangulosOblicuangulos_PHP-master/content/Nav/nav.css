@@ -1,0 +1,145 @@
+#mobileNav{
+    display: none;
+}
+#mobileNav_ul{
+    display: none;
+}
+#mainNav{
+    background-color: #0D1317;
+    padding: 2px;
+    margin-top: -10px;
+    position:fixed;
+    width: 100%;
+}
+
+#mainNav_ul{
+    list-style: none;
+    float: right;
+    margin-top: 20px;
+}
+
+.mainNav_li{
+    display: inline-flex;
+    padding: 20px;
+}
+
+.mainNav_a{
+    color: white;
+    text-decoration: none;
+}
+
+#logo {
+    display: inline-flex;
+    float: left;
+}
+#menuImg{
+    display: none;
+}
+
+#iniciarSesion_window{
+    background-image: linear-gradient(#339989, #7DE2D1, #FFFAFB);
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    animation: appearIniciarSesion_window;
+    animation-duration: 1s;
+}
+#login{
+    cursor: pointer;
+}
+#iniciarSesionContent{
+    margin-top: 140px;
+    text-align: center;
+    border: 5px solid black;
+    width: 400px;
+    margin-left: 40%;
+    background-color: #50B2C0;
+}
+
+#btn_iniciarSesion{
+    margin-top: 50px;
+    clear:left;
+    background-color: #FA7F08;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    width: 200px;
+    cursor: pointer;
+}
+#btn_iniciarSesion:hover{
+    background-color: #F29F05;
+}
+
+#cerrarSesion{
+    cursor: pointer;
+}
+
+#closeIcon_iniciarSesion{
+    margin-top: 10px;
+    margin-left: 80%;
+    cursor: pointer;
+}
+
+#registrarse{
+    cursor: pointer;
+    color: blue;
+    margin-bottom: 20px;
+}
+
+#bienvenidaInicioSesion{
+    color: white;
+}
+
+@media screen and (max-width: 700px){
+    #menuImg{
+        display: block;
+        float: right;
+        margin-top: 20px;
+        margin-right: 20px;
+        cursor: pointer;
+    }
+    #mainNav_ul{
+        display: none;
+    }
+    #mobileNav{
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        background-color: #F9A03F;
+        animation: appearMobileMenu;
+        animation-duration: 1s;
+    }
+    #mobileNav_ul{
+        display: block;
+    }
+    #mobileNav_ul{
+        text-align: center;
+        list-style: none;
+        margin-top: 100px;
+    }
+    .mobileNav_li{
+        margin: 50px;
+    }
+    .mobileNav_a{
+        text-decoration: none;
+        font-size: 20px;
+        color: white;
+    }
+}
+
+@keyframes appearMobileMenu {
+    from {
+        margin-left: 700px;
+    } to {
+        margin-left: 0px;
+    }
+}
+
+@keyframes appearIniciarSesion_window{
+    from{
+        margin-top: -800px;
+    } to {
+        margin-top: 0px;
+    }
+}

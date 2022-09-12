@@ -1,0 +1,71 @@
+#imgNavBar{
+    width: 100px;
+}
+.separation {
+    background-color: black;
+    color: white;
+}
+.separation:hover{
+    background-color: black;
+    color: white;
+}
+
+/*Navegacion Inferior*/
+@media screen and (max-width: 771px) {
+    #bottomNav{
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 611px) {
+    #bottomNav{
+        display: none;
+    }
+}
+
+/*Navegacion Superior*/
+
+@media screen and (max-width: 427px) {
+    #imgNavBar{
+        width: 120px;
+    }
+    #titNavbar{
+        display: none;
+    }
+}
+@media screen and (max-width: 393px) {
+    #imgNavBar{
+        width: 110px;
+    }
+    #titNavbar{
+        display: none;
+    }
+    .btns{
+        font-size: 18px;
+    }
+}
+
+/*Botones de "anterior" y "Seguir con la actividad"*/
+
+@media screen and (max-width: 364px) {
+    .btns{
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 334px) {
+    .btns{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 305px) {
+    .btns{
+        font-size: 10px;
+    }
+}
+@media screen and (max-width: 341px) {
+    #imgNavBar{
+        width: 100px;
+    }
+    #titNavbar{
+        display: none;
+    }
+}

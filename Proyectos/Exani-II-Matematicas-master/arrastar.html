@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="src/css/cssIndex.css">
+  <link rel="shortcut icon" href="src/images/index/Logoo.png" type="image/x-icon">
+  <link rel="stylesheet" href="src/css/cssReto.css">
+  <link rel="stylesheet" href="src/css/cssArrastrar.css">
+  <link rel="shortcut icon" href="src/images/index/MiLogo.png" type="image/x-icon">
+  <!--Css para Correcion del menu-->
+  <link rel="stylesheet" href="src/css/responsive.css">
+  <title>Actividad Jerarquia de Operaciones</title>
+</head>
+
+<header>
+  <!-- cambiar el color de la barra de menu-->
+  <!-- inicia menu-->
+  <nav id="menu" class="navbar navbar-expand-lg navbar-dark" style="background-color: #0A66C6;">
+
+
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html"><img src="src/images/index/MiLogo.png" width="100px" id="imgNavBar"><b
+          id="titNavbar"> EXANI II MATEMÁTICAS</b> </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html"><b>Inicio</b></a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <b>Contenido</b>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item separation"><b>Razonamiento aritmético</b></a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="jerarquia.html"><b>Jerarquía de operaciones</b></a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="operacionescomb.html"><b>Operaciones combinadas de suma, resta,
+                    multiplicacion y division con numeros enteros</b></a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="problemascon.html"><b>Problemas con suma, resta, multiplicacion y
+                    division con numeros decimales y fracciones</b>b></a>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item separation"><b>Razonamiento algebraico</b></a>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="expresiones.html"><b>Expresiones algebraicas</b></a>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+
+              <li><a class="dropdown-item retobtn" href="reto.html"><b>Reto de aprendizajes</b></a></li>
+            </ul>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </nav><!-- termina menu-->
+</header>
+
+<body style=" background-image: url(src/images/reto/fondoreto.png);">
+  <BR>
+  <BR>
+  <!-- titulo principal -EXANII II MATEMATICAS-->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <H1 style="text-align: center;"> <br>TEMA 1. RAZONAMIENTO ARITMETICO <br>
+          "Jerarquia de Operaciones" <br> <br> </H1>
+      </div>
+    </div>
+  </div>
+
+  <BR>
+
+  <div class="container">
+    <!-- comienza container-->
+    <hr SIZE="8px"> <!-- salto de parrafo-->
+    <!-- se puede cambiar color y tamaño-->
+    <div id="caja1" class="row">
+      <div class="col-md-12">
+        <header>
+          <center>
+            <H2>ACTIVIDAD</H2>
+          </center>
+          <center>
+            <p class="titulo"><b>Realiza los siguientes ejercicios con atencion y coloca la respuesta que consideres
+                correcta, en caso de no saber puedes regresar a repasar el tema o ver la solucion del problema.
+              </b></p>
+          </center> <br>
+        </header>
+      </div>
+    </div>
+  </div>
+  <div id="caja1" class="container">
+    <h1>Orden de la Jerarquia de Operaciones</h1>
+    <p id="btnDeshacer" onclick="deshacerChanges()" style="cursor: pointer" hidden>Deshacer</p>
+    <div id="resultado"></div>
+    <div class="row">
+      <div class="container" id="optionsContainer">
+        <div class="row">
+          <div class="col-md-12" id="titOpt">Da click en una imagen, esta aparecera en el recuadro numero 1, la siguiente en el numero 2 y asi sucesivamente</div>
+        </div>
+        <br><br>
+        <div class="row">
+          <div class="col-md-3" id="optImg0"></div>
+          <div class="col-md-3" id="optImg1"></div>
+          <div class="col-md-3" id="optImg2"></div>
+          <div class="col-md-3" id="optImg3"></div>
+        </div>
+        <br><br>
+      </div>
+
+      <div class="container" id="arrastarContainer"></div>
+      
+      <div class="col-md-6">
+        <br><br><br><br>
+        <div class="opera container" id="">
+              <p>
+                <center><a href="#" class="btn btn-primary btn-lg "  tabindex="-1" role="button" aria-disabled="true" onclick="validacion()"><b>Revisar la Actividad</b></a></center>
+                <br>
+                <center><button hidden id="verificar" class="btn btn-danger" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                  <h4>Verifica tus Respuestas</h4>
+                </button></center>
+              </p>
+              <div class="collapse" id="collapseExample">
+                <div class="card card-body">
+                  <b>Las Respuestas correctas son:</b>
+                  <span id="titleSpace1" class="smallTitleSpace">1</span>
+                  A). Parentesis ( ), [ ], { }
+                  <span id="titleSpace2" class="smallTitleSpace">2</span>
+                  D).Potencias y raices ^
+                  <span id="titleSpace3" class="smallTitleSpace">3</span> 
+                  C). Multiplicaciones y divisiones *, /
+                  <span id="titleSpace4" class="smallTitleSpace">4</span>
+                  B).Sumas y Restas +, -
+                </div>
+              </div>
+        </div>
+  </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"></script>
+
+    <script src="src/js/arrastrar.js"></script>
+    <br><br>
+
+    <hr SIZE="8px"><!-- salto de parrafo-->
+    <!-- se puede cambiar color y tamaño-->
+    <!-- salto de parrafo-->
+    <!-- se puede cambiar color y tamaño-->
+    <div class="row ">
+
+
+      <div id=".temita" class="col-md-12 -flex justify-content-between align-items-center">
+
+        <!-- botones-->
+        <di id=".temita" class="btn-group temita  col-md-12 card-body -flex justify-content-between align-items-center"
+          role="group" aria-label="Basic example">
+          <a href="jerarquia.html" class="btn btn-primary btn-lg btns" text-align="center" ; tabindex="-1" role="button"
+            aria-disabled="true" id="repasar" hidden>
+            <center><b>Repasar el Tema</center></b>
+          </a>
+
+          <a href="arrastar.html" class="btn btn-primary btn-lg btns" tabindex="-1" role="button" aria-disabled="true"
+            id="reiniciar" hidden><b>Reiniciar la Actividad</b></a>
+      </div>
+      <!--<a href="jerarquia.html" class="btn btn-primary btn-lg " text-align="center"; tabindex="-1" role="button" aria-disabled="true"><center><b>Repasar el Tema</center></b></a>
+      
+                <a href="arrastar.html" class="btn btn-primary btn-lg "  tabindex="-1" role="button" aria-disabled="true"><b>Reiniciar la Actividad</b></a>-->
+
+
+      <!-- btn-outline-dark es el contorno del boton-->
+      <!--style="background-color: black;" cambia el color del boton -->
+    </div>
+    <hr SIZE="8px"><!-- salto de parrafo-->
+    <!-- se puede cambiar color y tamaño-->
+    <div class="row ">
+      <!--<center><h2 class="titulo"><b> texto alternativo </b></H2> </center><br><br>-->
+
+
+      <div id="Temas" class="col-md-12 card-body d-flex justify-content-between align-items-center">
+
+        <!-- botones-->
+
+        <a href="jerarquia.html" class="btn btn-primary btn-lg btns" id="volver" hidden><b>Anterior</b></a>
+        <!-- float-right se utiliza para que se posicione el boton a la derecha -->
+        <a href="operacionescomb.html" class="btn btn-primary btn-lg  float-right btns" id="siguiente"
+          hidden><b>Siguiente tema</b></a>
+        <!-- btn-outline-dark es el contorno del boton-->
+        <!--style="background-color: black;" cambia el color del boton -->
+      </div>
+
+    </div>
+
+  </div>
+  </div>
+
+  </div>
+  <b>
+    <hr SIZE="8px">
+    <!--salto de linea-->
+
+    <nav aria-label="Page navigation example" id="bottomNav">
+      <ul class="pagination justify-content-center">
+        <li class="page-item">
+          <a class="page-link" href="index.html">Inicio</a>
+        </li>
+        <li class="page-item"><a class="page-link" href="jerarquia.html">Tema 1</a></li>
+        <li class="page-item"><a class="page-link" href="arrastar.html">Actividad 1</a></li>
+        <li class="page-item"><a class="page-link" href="operacionescomb.html">Tema 2</a></li>
+        <li class="page-item"><a class="page-link" href="actividad1.html">Actividad 2</a></li>
+        <li class="page-item"><a class="page-link" href="problemascon.html">Tema 3</a></li>
+        <li class="page-item"><a class="page-link" href="actividad2.html">Actividad 3</a></li>
+        <li class="page-item"><a class="page-link" href="expresiones.html">Tema 4</a></li>
+        <li class="page-item"><a class="page-link" href="testMemorama.html">Actividad 4</a></li>
+        <li class="page-item">
+          <a class="page-link" href="reto.html">Reto</a>
+        </li>
+      </ul>
+    </nav>
+  </b>
+  </div> <!-- termina container-->
+  <script src="src/js/responsiveNavbar.js"></script>
+</body>
+
+</html>

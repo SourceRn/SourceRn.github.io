@@ -1,0 +1,10 @@
+#resultado h3 {
+    background: #C6DB48;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+#resultado span {
+    color: #000;
+    font-weight: bold;
+}
