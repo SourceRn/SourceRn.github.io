@@ -4,14 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/css/index.css">
+    <link rel="stylesheet" href="src/css/index_responsive.css">
     <title>Portafolio</title>
 </head>
 <body>
-    <nav><span>Rammses Nieves Gutierrez</span></nav>
+    <nav><a href="index.html" id="index_link"><span id="changing_span">Rammses Nieves Gutierrez</span></a></nav>
     <div id="main_content">
-        <li><a href="Proyectos/encript_oracleOne/inicio.html">Encriptador | Oracle One Next Education</a></li>
-        <li><a href="Proyectos/Exani-II-Matematicas-master/index.html">MATEXANI II</a></li>
-        <li><a href="Proyectos/triangulosOblicuangulos_PHP-master/index.php">Resolución de Triangulos Oblicuos</a></li>
+        <div id="recent_projects" class="recent_projects">
+            <p class="title">Recents Projects</p> <br><br>
+            <ul>
+                <li>Encriptador | Oracle One Next Education</li>
+                <li>MATEXANI II</li>
+                <li>Resolución de Triangulos Oblicuos</li>
+            </ul>
+        </div>
     </div>
+    <script src="src/js/index.js"></script>
 </body>
 </html>
