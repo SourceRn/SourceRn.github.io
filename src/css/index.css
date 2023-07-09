@@ -10,6 +10,9 @@ ul{
 li {
     padding: 10px;
 }
+body {
+    background-color: #0D0D0D;
+}
 /*UNIVERSAL*/
 
 /*CSS PARA NAV*/
@@ -53,13 +56,14 @@ nav span:hover{
     background: rgb(19,26,64);
     background: linear-gradient(90deg, rgba(19,26,64,1) 0%, rgba(55,59,140,1) 30%, rgba(102,95,189,1) 63%);  
     height: 530px;
+    border-radius: 0px 0px 200px 200px;
 }
 
 .recent_projects {
     background-color: #0D0D0D;
     height: 450px;
     padding: 30px;
-    border-radius: 20px;
+    border-radius: 20px 20px 200px 200px;
     color: white;
     font-size: 24px;
 }
@@ -109,4 +113,34 @@ nav span:hover{
 #recent_projects-third a:hover {
     color: coral;
     transition: all .5s;
+}
+
+
+/*CSS PARA SHORT CODES*/
+#secondary_content {
+    background-color:#A2D9FF;
+    margin-top: -10px;
+    border-radius: 200px 200px 20px 20px;
+}
+
+.short_code-link {
+    text-decoration: none;
+    color: black;
+}
+.short_code-link:hover {
+    color:coral;
+}
+.short_code-li {
+    font-size: 24px;
+    padding-bottom: 60px;
+}
+
+#short_code-ul {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+#short_code-title {
+    padding-top: 60px;
+    margin-bottom: 40px;
 }

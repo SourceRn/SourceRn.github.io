@@ -79,5 +79,22 @@ function carouselProjects() {
     }, 2000);
 }
 
+function shortCodes() {
+    let short_codes = document.getElementById("short_codes");
+    const arr_short_codes = [{
+        id: "src/codes/Figuras/index.html",
+        name: "Figuras. Calculo Perimetros y Areas",
+        html_id: "short_codes-calculoFigurasPermitrosAreas"
+    }];
+
+    short_codes.innerHTML = `
+        <ul id="short_code-ul">
+            <li class="title" id="short_code-title">Short Codes</li>
+            ${arr_short_codes.map(code => `<li class="short_code-li"><a href="${code.id}" id="${code.html_id}" class="short_code-link">${code.name}</a></li>`).join('')}
+        </ul>
+    `;
+}
+
+shortCodes();
 carouselProjects();
 logoAnimation();

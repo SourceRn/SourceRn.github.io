@@ -1,0 +1,31 @@
+* {
+    margin: 0 auto;
+}
+
+
+#volver {
+    margin: 20px;
+    font-size: 16px;
+}
+
+.container {
+    margin-top: 300px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.btnCallFunctions {
+    cursor: pointer;
+    margin: 50px;
+}
+
+.btnCallFunctions:hover {
+    color:orangered;
+}
+
+.titulo {
+    margin-top: -100px;
+    margin-bottom: 100px;
+    font-size: 28px;
+    font-weight: bold;
+}
