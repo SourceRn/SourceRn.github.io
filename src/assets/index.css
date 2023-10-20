@@ -16,6 +16,7 @@
 }
 
 nav {
+    margin-top: -19px;
     padding: 4%;
     background-color: var(--nav-background-color);
 }
@@ -32,6 +33,10 @@ body {
     text-decoration: none;
     color: var(--nav-font-color);
     transition: all .5s;
+}
+
+#coverImg {
+    width: 100%;
 }
 
 #content {
