@@ -4,26 +4,80 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="src/css/index.css">
-    <link rel="stylesheet" href="src/css/index_responsive.css">
+    <link rel="stylesheet" href="./src/assets/index.css">
     <title>Portafolio</title>
 </head>
 <body>
-    <nav><a href="index.html" id="index_link"><span id="changing_span">Rammses Nieves Gutierrez</span></a></nav>
-    <div id="main_content">
-        <div id="recent_projects" class="recent_projects">
-            <p class="title">Recents Projects</p> <br><br>
-            <ul>
-                <li>Encriptador | Oracle One Next Education</li>
-                <li>MATEXANI II</li>
-                <li>Resolución de Triangulos Oblicuos</li>
+    <nav>
+        <ul id="nav_list">
+            <li id="nav_list_element">
+                <a href="./index.html" id="nav_list_element_link">
+                    <h1>Rammses Nieves Gutierrez | Front End Web Developer</h1>
+                    <h2>Javascript | CSS | HTML</h2>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    
+    <div id="cover"><img id="cover" src="./src/assets/images/cover.png" alt="cover" width="100%"></div>
+
+    <div id="content">
+
+        <div class="content_title">
+            <h2>Recent Projects</h2>
+        </div>
+        <hr class="separator">
+
+        <div id="first_projects">
+            <ul class="project_list">
+                <li class="project_list_element" id="first">
+                    <p class="title">Exani-II</p>
+                    <p class="description">
+                        Exani II is a project made during my highschool days
+                        it consist in a web application that gives the opportunitie
+                        to any student who wants to prepare for the Exani Exam,
+                        needed to enter to an university and get a degree.
+                    </p>
+                    <a href="./src/public/Proyectos/Exani-II-Matematicas-master/index.html">
+                        <img class="project_img" src="./src/assets/images/exaniProject.png" height="200px" alt="exani">
+                    </a>
+                </li>
+                <li class="project_list_element" id="second">
+                    <p class="title">Encriptator Oracle-One</p>
+                    <p class="description">
+                        Simple encriptator made during my stance in a course by
+                        Oracle where I haved the opportunitie to work in different
+                        small projects and talk with other people interested in 
+                        web development
+                    </p>
+                    <a href="./src/public/Proyectos/encript_oracleOne/inicio.html">
+                        <img class="project_img" src="./src/assets/images/encriptatorProject.png" height="200px" alt="encriptator">
+                    </a>
+                </li>
             </ul>
         </div>
-    </div>
-    <div id="secondary_content">
-        <div id="short_codes"></div>
-    </div>
 
-    <script src="src/js/index.js"></script>
+        
+        <div class="content_title" id="shortProjects_title">
+            <h2>Short Projects</h2>
+        </div>
+        <hr class="separator">
+
+        <div id="short_projects">
+            <ul class="project_list">
+                <li class="project_list_element" id="first">
+                    <p class="title">Simple Figures</p>
+                    <p class="description">
+                        A code that allow to solve operations for the area 
+                        and perimeter of three figures: triangles, pentagon 
+                        and trapece. 
+                    </p>
+                    <br>
+                    <a class="link_shortProjects" href="./src/public/codes/Figuras/index.html">Go -></a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
 </body>
 </html>
