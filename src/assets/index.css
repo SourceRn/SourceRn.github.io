@@ -8,6 +8,8 @@
     --separator-background-color: #1a515f;
     --border_projects_background-color: black;
     --project_description-font-color: white;
+    --button-color: #10bcca;
+    --button_hover-color: #1096aa;
 }
 
 * {
@@ -96,4 +98,22 @@ body {
 }
 .project_img {
     margin: 20px;
+}
+.button {
+    display: flex;
+    background-color: var(--button-color);
+    width: 100px;
+    border-radius: 10px;
+    transition: all .5s;
+    margin-bottom: 10px;
+}
+.button:hover {
+    background-color: var(--button_hover-color);
+}
+.button_link {
+    text-decoration: none;
+    padding: 5px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
 }
