@@ -1,0 +1,75 @@
+#content {
+    margin-left: 10%;
+    margin-bottom: 10%;
+    width: 80%;
+}
+
+.schools {
+    display: flex;
+    flex-direction: row;
+    justify-content: center !important;
+}
+
+.content_element {
+    display: block;
+    margin: 3rem;
+    text-align: center;
+}
+
+.element_list_schoolCETis {
+    list-style-position:inside;
+    margin-left: -3%;
+}
+
+#list_schoolCETis {
+    margin-top: -20px;
+}
+
+#special_element {
+    list-style: none;
+    margin-bottom: 25px;
+}
+#special_element_2 {
+    list-style: none;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+#CETis_title {
+    margin-top: -20px;
+}
+
+#education {
+    display: flex;
+    justify-content: center;
+}
+
+#works {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#NOT_FOUND {
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+#social_media {
+    text-align: center;
+}
+
+.logo {
+    width: 100px;
+}
+
+.element_social_media {
+    list-style: none;
+}
+
+@media (max-width: 700px) {
+    
+    .schools {
+        flex-direction: column;
+    }
+
+}

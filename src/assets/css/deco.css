@@ -1,0 +1,117 @@
+/*
+
+I'LL MAINTAIN THIS PEACE OF CODE JUST IN CASE I RECOVER THE WILL TO 
+CONTINUE IT, DIDN'T WORK AS I EXPECTED (NOTHING SURPRISING... IM VERY BAD
+WITH CSS)
+
+*/
+
+
+
+/* LEFT */
+
+#deco {
+    position: absolute;
+    display: flex;
+    width: 35%;
+    height: 100px;
+    background-color: black;
+    margin-top: -10%;
+    margin-left: -50px;
+    margin-right: 75%;
+    border-radius: 200px;
+}
+#deco2 {
+    position: absolute;
+    display: flex;
+    width: 30%;
+    height: 100px;
+    background-color: white;
+    margin-top: -10%;
+    margin-left: -50px;
+    border-radius: 200px;
+}
+#deco3 {
+    position: absolute;
+    display: flex;
+    width: 25%;
+    height: 100px;
+    background-color: black;
+    margin-top: -10%;
+    margin-left: -50px;
+    border-radius: 200px;
+}
+#deco4 {
+    position: absolute;
+    display: flex;
+    width: 20%;
+    height: 100px;
+    background-color: white;
+    margin-top: -10%;
+    margin-left: -50px;
+    border-radius: 200px;
+}
+#deco5 {
+    position: absolute;
+    display: flex;
+    width: 15%;
+    height: 100px;
+    background-color: black;
+    margin-top: -10%;
+    margin-left: -50px;
+    border-radius: 200px;
+}
+
+/* RIGHT */
+
+#deco6 {
+    position: absolute;
+    display: flex;
+    width: 35%;
+    height: 100px;
+    background-color: black;
+    margin-top: -10%;
+    margin-left: 75%;
+    border-radius: 200px;
+}
+#deco7 {
+    position: absolute;
+    display: flex;
+    float: right;
+    width: 30%;
+    height: 100px;
+    background-color: white;
+    margin-top: -10%;
+    margin-left: 80%;
+    border-radius: 200px;
+}
+#deco8 {
+    position: absolute;
+    display: flex;
+    width: 25%;
+    height: 100px;
+    background-color: black;
+    margin-top: -10%;
+    margin-left: 85%;
+    border-radius: 200px;
+}
+#deco9 {
+    position: absolute;
+    display: flex;
+    width: 20%;
+    height: 100px;
+    background-color: white;
+    margin-top: -10%;
+    margin-left: 90%;
+    border-radius: 200px;
+}
+#deco10 {
+    position: absolute;
+    display: flex;
+    width: 15%;
+    height: 100px;
+    background-color: black;
+    margin-top: -10%;
+    margin-left: 95%;
+    border-radius: 200px;
+}

@@ -1,0 +1,21 @@
+header {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    width: 80%;
+    margin-left: 10%;
+}
+
+.header_element {
+    display: block;
+    margin: 3rem;
+    text-align: center;
+}
+
+#name {
+    font-size: 17px;
+}
+
+#description {
+    text-align: justify;
+}
