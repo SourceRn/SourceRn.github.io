@@ -1,0 +1,55 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    background-color: azure;
+}
+
+#list_projects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 400px;
+    height: 400px;
+    background-color:coral;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+    #list_projects_title {
+        position: absolute;
+        top: 16vh;
+        font-size: 32px;
+        font-weight: bold;
+        color:black;
+    }
+
+    #separator {
+        position: absolute;
+        top: 23vh;
+        width: 300px;
+        height: 5px;
+        border: none;
+        border-radius: 10px;
+        background-color: black;
+    }
+
+    #principal_list {
+        list-style: none;
+    }
+
+        #list_element_link {
+            text-decoration: none;
+            color: black;
+            font-size: 24px;
+            font-weight: bold;
+        }
+            #list_element_link:hover {
+                color: azure;
+            }
