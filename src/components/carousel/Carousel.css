@@ -1,0 +1,98 @@
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
+  }
+  
+  .project-slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+  }
+  
+  .project-info {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 20px;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .project-info h2 {
+    font-size: 24px;
+    margin-bottom: 1rem;
+    color: white; /* Gris claro, sin competir con el título */
+    font-weight: 700;
+  }
+  
+  .project-info a:hover {
+    background-color: #ffffff40;
+  }
+  
+  .nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2.5rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    z-index: 3;
+  }
+  
+  .nav-button.left {
+    left: 20px;
+  }
+  
+  .nav-button.right {
+    right: 20px;
+  }
+
+
+  .carousel-indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 5;
+  }
+  
+  .indicator-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ffffff55;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .indicator-dot.active {
+    background-color: white;
+  }
+
+  @media screen and (max-width: 860px) {
+    .nav-button {
+      display: none;
+    }
+  }

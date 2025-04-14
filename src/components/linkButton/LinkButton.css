@@ -1,0 +1,11 @@
+.link-button {
+    padding: 0.8rem 1.8rem;
+    background-color: rgb(15, 23, 42);    /* Azul profundo */
+    color: rgb(255, 215, 160);            /* Dorado claro sin saturar */
+    border: 1px solid white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}

@@ -1,0 +1,71 @@
+.service-stepper-container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 1rem;
+    margin: 4rem auto;
+    width: 100%;
+  }
+  
+  .line {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #ccc;
+    z-index: 1;
+  }
+  
+  .step {
+    text-align: center;
+    z-index: 2;
+    width: 30%;
+    font-size: 18px;
+  }
+  
+  .step-icon {
+    font-size: 34px;
+    background: #181926;
+    color: white;
+    padding: 0.7rem;
+    border-radius: 50%;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .step-title {
+    font-size: 28px;
+    margin-bottom: 0.3rem;
+    color: #181926;
+  }
+  
+  .step-desc {
+    font-size: 20pxrem;
+    color: #333;
+  }
+
+  .step.active .step-icon {
+    background-color: #6873b0;
+    color: #181926;
+    transform: scale(1.2);
+    transition: 0.3s ease;
+  }
+
+  @media (max-width: 768px) {
+    .service-stepper-container {
+      flex-direction: column;
+      align-items: center;
+      padding: 0rem;
+    }
+  
+    .line {
+      display: none;
+    }
+  
+    .step {
+      width: 80%;
+      margin-bottom: 2rem;
+    }
+  }
