@@ -5,13 +5,23 @@
     overflow: hidden;
   }
   
+  /* CAMBIO CLAVE: Poner el fondo como parte de esta sección */
+.background-fixed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Ya no fixed a toda la ventana */
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  pointer-events: none;
+}
+
   .project-slide {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
     display: flex;
     justify-content: center;
     align-items: center;

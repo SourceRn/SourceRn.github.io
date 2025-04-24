@@ -52,6 +52,14 @@ export default function Carousel() {
 
   return (
     <section className="carousel-container" id="home">
+
+<div
+    className="background-fixed"
+    style={{
+      backgroundImage: `url(${projects[index].image})`
+    }}
+  ></div>
+
       <AnimatePresence mode="wait">
         <motion.article
           key={projects[index].title}
@@ -60,9 +68,7 @@ export default function Carousel() {
           animate={{ x: 0, opacity: 1 }}
           exit={{ x: direction > 0 ? -100 : 100, opacity: 0 }}
           transition={{ duration: 0.5 }}
-          style={{
-            backgroundImage: `url(${projects[index].image})`
-          }}
+          
           drag={window.innerWidth < 860 ? "x" : false}
           dragConstraints={{ left: 0, right: 0 }}
           onDragEnd={(_, info) => {

@@ -5,8 +5,8 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const entrada = path.join(__dirname, '../assets', 'aboutImage.png');
-const salida = path.join(__dirname, '../assets', 'aboutImage.webp');
+const entrada = path.join(__dirname, '../../public', 'RI.png');
+const salida = path.join(__dirname, '../../public', 'RI.webp');
 
 sharp(entrada)
     .webp({ quality: 70 })

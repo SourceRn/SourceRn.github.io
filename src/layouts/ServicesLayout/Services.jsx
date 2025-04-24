@@ -18,7 +18,7 @@ export default function Services() {
     {
       icon: "🔧",
       title: "Web Maintainance",
-      desc: "We aassure the functionality",
+      desc: "We assure the functionality",
     },
   ];
 
@@ -40,7 +40,7 @@ export default function Services() {
         className="servicesP"
       >
         Our process is centered in transforming your vision in a functional, atractive, 
-        and easy to use Webiste.
+        and easy to use Website.
       </motion.p>
     </section>
   );
