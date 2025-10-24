@@ -5,11 +5,10 @@ import Link from "next/link";
 import Image from "next/image";
 import { urlFor } from "@/lib/sanity.image";
 import type { Project } from "@/types/content";
-import type { SanityImageSource } from "@sanity/image-url/lib/types/types";
+import type { SanityImageSource } from "@sanity/asset-utils";
 
 export default function ProjectsCarousel({ projects }: { projects: Project[] }) {
   const n = projects?.length ?? 0;
-
   const [index, setIndex] = useState(0);
   const startX = useRef<number | null>(null);
 
@@ -66,13 +65,13 @@ export default function ProjectsCarousel({ projects }: { projects: Project[] }) 
               <div className={`relative ${isCenter ? "aspect-[16/9]" : "aspect-[16/10]"}`}>
                 {p.cover ? (
                   <Image
-                    src={urlFor(p.cover as unknown as SanityImageSource)
+                    src={urlFor(p.cover as SanityImageSource)
                       .width(isCenter ? 1200 : 800)
                       .height(isCenter ? 675 : 500)
                       .fit("crop")
                       .auto("format")
                       .url()}
-                    alt={(p as any).cover?.alt || p.title}
+                    alt={p.cover.alt || p.title}
                     fill
                     sizes={isCenter ? "(max-width: 768px) 100vw, 640px" : "(max-width: 768px) 50vw, 320px"}
                     className="object-cover transition-transform duration-300 group-hover:scale-[1.02]"
@@ -83,9 +82,7 @@ export default function ProjectsCarousel({ projects }: { projects: Project[] }) 
               </div>
 
               <div className="p-4">
-                <h3 className={`font-semibold ${isCenter ? "text-lg" : "text-base"} text-zinc-800`}>
-                  {p.title}
-                </h3>
+                <h3 className={`font-semibold ${isCenter ? "text-lg" : "text-base"} text-zinc-800`}>{p.title}</h3>
                 {p.summary && <p className="text-sm text-zinc-600 line-clamp-2">{p.summary}</p>}
               </div>
             </Link>
@@ -94,34 +91,13 @@ export default function ProjectsCarousel({ projects }: { projects: Project[] }) 
       </div>
 
       {n > 1 && (
-        <>
-          <button
-            onClick={goPrev}
-            aria-label="Anterior"
-            className="absolute left-0 top-1/2 -translate-y-1/2 rounded-full border bg-white/80 backdrop-blur px-6 py-4 hover:bg-white shadow text-zinc-800"
-          >
-            ‹
-          </button>
-          <button
-            onClick={goNext}
-            aria-label="Siguiente"
-            className="absolute right-0 top-1/2 -translate-y-1/2 rounded-full border bg-white/80 backdrop-blur px-6 py-4 hover:bg-white shadow text-zinc-800"
-          >
-            ›
-          </button>
-        </>
-      )}
-
-      {n > 1 && (
         <div className="mt-4 flex justify-center gap-2">
           {projects.map((_, i) => (
             <button
               key={i}
               aria-label={`Ir al slide ${i + 1}`}
               onClick={() => setIndex(i)}
-              className={`h-2 rounded-full transition-all ${
-                i === index ? "bg-yellow-300 w-6" : "bg-zinc-300 w-2 hover:bg-zinc-400"
-              }`}
+              className={`h-2 rounded-full transition-all ${i === index ? "bg-yellow-300 w-6" : "bg-zinc-300 w-2 hover:bg-zinc-400"}`}
             />
           ))}
         </div>

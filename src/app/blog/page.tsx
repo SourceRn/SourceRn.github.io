@@ -28,13 +28,8 @@ export default async function BlogPage() {
             {post.cover ? (
               <div className="relative aspect-video mb-3 overflow-hidden rounded-lg">
                 <Image
-                  src={urlFor(post.cover)
-                    .width(1200)
-                    .height(675)
-                    .fit("crop")
-                    .auto("format")
-                    .url()}
-                  alt={(post as any).cover?.alt || post.title}
+                  src={urlFor(post.cover).width(1200).height(675).fit("crop").auto("format").url()}
+                  alt={(post.cover as { alt?: string } | undefined)?.alt || post.title}
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover"

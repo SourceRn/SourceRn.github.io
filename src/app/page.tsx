@@ -41,7 +41,7 @@ export default async function HomePage() {
                 <div className="mb-3 overflow-hidden rounded-lg">
                   <SanityImage
                     value={post.cover}
-                    alt={(post as any).cover?.alt || post.title}
+                    alt={(post.cover as { alt?: string } | undefined)?.alt || post.title}
                     priority={i === 0}
                     maxWidth={1200}
                   />
@@ -49,7 +49,6 @@ export default async function HomePage() {
               ) : (
                 <div className="aspect-video bg-zinc-100 rounded-lg mb-3" />
               )}
-
               <h3 className="font-medium">{post.title}</h3>
               <p className="text-sm text-zinc-600 line-clamp-2">{post.excerpt}</p>
             </Link>

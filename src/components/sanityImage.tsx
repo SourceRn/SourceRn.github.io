@@ -1,9 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { getImageDimensions } from "@sanity/asset-utils";
+import { getImageDimensions, type SanityImageSource } from "@sanity/asset-utils";
 import { urlFor } from "@/lib/sanity.image";
-import type { SanityImageSource } from "@sanity/image-url/lib/types/types";
 
 export default function SanityImage({
   value,
@@ -16,10 +15,10 @@ export default function SanityImage({
   priority?: boolean;
   maxWidth?: number;
 }) {
-  const { width, height } = getImageDimensions(value as any);
+  const { width, height } = getImageDimensions(value);
 
   const src = urlFor(value)
-    .width(Math.min((width as number) || maxWidth, maxWidth))
+    .width(Math.min(width ?? maxWidth, maxWidth))
     .fit("max")
     .auto("format")
     .url();
@@ -28,8 +27,8 @@ export default function SanityImage({
     <Image
       src={src}
       alt={alt || ""}
-      width={(width as number) || maxWidth}
-      height={(height as number) || Math.round((maxWidth * 9) / 16)}
+      width={width ?? maxWidth}
+      height={height ?? Math.round((maxWidth * 9) / 16)}
       sizes="(max-width: 768px) 100vw, 768px"
       priority={priority}
       style={{ width: "100%", height: "auto" }}

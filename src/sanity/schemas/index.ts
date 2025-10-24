@@ -1,5 +1,6 @@
 import post from "./post";
 import project from "./project";
-import profile from './profile';
+import profile from "./profile";
 
-export default [post, project, profile];
+const schemas = [post, project, profile];
+export default schemas;

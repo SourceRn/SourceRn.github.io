@@ -14,6 +14,7 @@ export const metadata = {
 
 export default async function ProjectsPage() {
   const projects: Project[] = await sanityClient.fetch(projectsQuery);
+
   return (
     <main>
       <h1 className="text-2xl font-bold mb-6">Proyectos</h1>
@@ -27,13 +28,8 @@ export default async function ProjectsPage() {
             {p.cover ? (
               <div className="relative aspect-video mb-3 overflow-hidden rounded-lg">
                 <Image
-                  src={urlFor(p.cover)
-                    .width(1200)
-                    .height(675)
-                    .fit("crop")
-                    .auto("format")
-                    .url()}
-                  alt={(p as any).cover?.alt || p.title}
+                  src={urlFor(p.cover).width(1200).height(675).fit("crop").auto("format").url()}
+                  alt={(p.cover as { alt?: string } | undefined)?.alt || p.title}
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-cover"

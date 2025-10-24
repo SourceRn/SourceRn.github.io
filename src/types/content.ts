@@ -1,36 +1,27 @@
-export type SanitySlug = { current: string };
+import type { SanityImageSource } from "@sanity/asset-utils";
+
+export type ImageWithAlt = SanityImageSource & { alt?: string };
 
 export type Post = {
   _id: string;
   title: string;
-  slug: string;                
+  slug: string;
   excerpt?: string;
-  cover?: unknown;             
+  cover?: ImageWithAlt;          
   tags?: string[];
   publishedAt?: string;
-  content?: unknown;           
+  content?: unknown;
 };
 
 export type Project = {
   _id: string;
   title: string;
-  slug: string;                
+  slug: string;
   summary?: string;
-  cover?: unknown;
+  cover?: ImageWithAlt;             
   tech?: string[];
   year?: number;
   links?: { demo?: string; repo?: string } | undefined;
   content?: unknown;
   featured?: boolean;
-};
-
-export type Profile = {
-  _id: string;
-  name: string;
-  role?: string;
-  avatar?: unknown;
-  intro?: unknown;
-  location?: string;
-  skills?: string[];
-  links?: { github?: string; linkedin?: string; email?: string; cv?: string };
 };

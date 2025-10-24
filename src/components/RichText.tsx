@@ -1,7 +1,12 @@
 import { PortableText, type PortableTextComponents } from "@portabletext/react";
 import type { PortableTextBlock } from "@portabletext/types";
+import type { SanityImageSource } from "@sanity/asset-utils"; 
 import SanityImage from "./sanityImage";
 import CodeBlock from "./CodeBlock";
+
+type LinkMark = { href?: string };
+type ImageValue = SanityImageSource & { alt?: string };
+type CodeValue = { language?: string; code: string; filename?: string };
 
 const components: PortableTextComponents = {
   block: {
@@ -10,9 +15,7 @@ const components: PortableTextComponents = {
     h3: ({ children }) => <h3 className="mt-8">{children}</h3>,
     normal: ({ children }) => <p>{children}</p>,
     blockquote: ({ children }) => (
-      <blockquote className="border-l-4 pl-4 italic text-zinc-600">
-        {children}
-      </blockquote>
+      <blockquote className="border-l-4 pl-4 italic text-zinc-600">{children}</blockquote>
     ),
   },
   list: {
@@ -29,7 +32,7 @@ const components: PortableTextComponents = {
     strong: ({ children }) => <strong className="font-semibold">{children}</strong>,
     em: ({ children }) => <em className="italic">{children}</em>,
     link: ({ value, children }) => {
-      const href = (value as any)?.href || "#";
+      const href = (value as LinkMark)?.href || "#";
       const isExternal = href?.startsWith("http");
       return (
         <a
@@ -44,17 +47,18 @@ const components: PortableTextComponents = {
     },
   },
   types: {
-    image: ({ value }) => (
-      <figure className="my-6">
-        <SanityImage value={value as any} alt={(value as any)?.alt} />
-        {(value as any)?.alt ? (
-          <figcaption className="mt-2 text-sm text-zinc-500">
-            {(value as any).alt}
-          </figcaption>
-        ) : null}
-      </figure>
-    ),
-    code: ({ value }) => <CodeBlock value={value as any} />,
+    image: ({ value }) => {
+      const v = value as ImageValue | undefined;
+      return (
+        <figure className="my-6">
+          <SanityImage value={v as SanityImageSource} alt={v?.alt} />
+          {v?.alt ? (
+            <figcaption className="mt-2 text-sm text-zinc-500">{v.alt}</figcaption>
+          ) : null}
+        </figure>
+      );
+    },
+    code: ({ value }) => <CodeBlock value={value as CodeValue} />,
     hr: () => <hr className="my-10 border-zinc-200" />,
   },
 };
