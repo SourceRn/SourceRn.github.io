@@ -1,5 +1,7 @@
 import "prismjs/themes/prism.css";
 import "./globals.css";
+import Link from "next/link";
+
 export const metadata = { 
   title: {
     default: "Rammses ITIC - Proyectos y blog", 
@@ -12,11 +14,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="min-h-screen bg-white text-zinc-900">
         <div className="max-w-5xl mx-auto px-4 py-8">
           <header className="flex items-center justify-between mb-10">
-            <a href="/" className="font-semibold">rammsesitic.dev</a>
+            <Link href="/" className="font-semibold">rammsesitic.dev</Link>
             <nav className="flex gap-4 text-sm">
-              <a href="/projects">Proyectos</a>
-              <a href="/blog">Blog</a>
-              <a href="/about">Sobre mí</a>
+              <Link href="/projects">Proyectos</Link>
+              <Link href="/blog">Blog</Link>
+              <Link href="/about">Sobre mí</Link>
             </nav>
           </header>
           {children}

@@ -1,9 +1,9 @@
 import { PortableText, type PortableTextComponents } from "@portabletext/react";
+import type { PortableTextBlock } from "@portabletext/types";
 import SanityImage from "./sanityImage";
 import CodeBlock from "./CodeBlock";
 
 const components: PortableTextComponents = {
-  // bloques de texto (párrafos y títulos)
   block: {
     h1: ({ children }) => <h1 className="scroll-mt-24">{children}</h1>,
     h2: ({ children }) => <h2 className="mt-10 scroll-mt-24">{children}</h2>,
@@ -15,8 +15,6 @@ const components: PortableTextComponents = {
       </blockquote>
     ),
   },
-
-  // listas
   list: {
     bullet: ({ children }) => <ul className="list-disc pl-6">{children}</ul>,
     number: ({ children }) => <ol className="list-decimal pl-6">{children}</ol>,
@@ -24,8 +22,6 @@ const components: PortableTextComponents = {
   listItem: {
     bullet: ({ children }) => <li className="marker:text-zinc-400">{children}</li>,
   },
-
-  // marcas/formatos inline
   marks: {
     code: ({ children }) => (
       <code className="px-1.5 py-0.5 rounded bg-zinc-100">{children}</code>
@@ -33,7 +29,7 @@ const components: PortableTextComponents = {
     strong: ({ children }) => <strong className="font-semibold">{children}</strong>,
     em: ({ children }) => <em className="italic">{children}</em>,
     link: ({ value, children }) => {
-      const href = value?.href || "#";
+      const href = (value as any)?.href || "#";
       const isExternal = href?.startsWith("http");
       return (
         <a
@@ -47,22 +43,22 @@ const components: PortableTextComponents = {
       );
     },
   },
-
-  // tipos embebidos (imágenes, código, etc.)
   types: {
     image: ({ value }) => (
       <figure className="my-6">
-        <SanityImage value={value} alt={value?.alt} />
-        {value?.alt ? (
-          <figcaption className="mt-2 text-sm text-zinc-500">{value.alt}</figcaption>
+        <SanityImage value={value as any} alt={(value as any)?.alt} />
+        {(value as any)?.alt ? (
+          <figcaption className="mt-2 text-sm text-zinc-500">
+            {(value as any).alt}
+          </figcaption>
         ) : null}
       </figure>
     ),
-    code: ({ value }) => <CodeBlock value={value} />, // ver componente abajo
+    code: ({ value }) => <CodeBlock value={value as any} />,
     hr: () => <hr className="my-10 border-zinc-200" />,
   },
 };
 
-export default function RichText({ value }: { value: any }) {
+export default function RichText({ value }: { value: PortableTextBlock[] }) {
   return <PortableText value={value} components={components} />;
 }

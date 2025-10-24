@@ -1,29 +1,22 @@
 'use client';
 
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { urlFor } from "@/lib/sanity.image";
-
-type Project = {
-  _id: string;
-  title: string;
-  slug: string;
-  summary?: string;
-  cover?: any;
-};
+import type { Project } from "@/types/content";
+import type { SanityImageSource } from "@sanity/image-url/lib/types/types";
 
 export default function ProjectsCarousel({ projects }: { projects: Project[] }) {
   const n = projects?.length ?? 0;
-  if (!n) return null;
+
+  const [index, setIndex] = useState(0);
+  const startX = useRef<number | null>(null);
 
   const mod = (a: number, b: number) => ((a % b) + b) % b;
-  const [index, setIndex] = useState(0);
+  const goPrev = useCallback(() => setIndex((i) => mod(i - 1, n)), [n]);
+  const goNext = useCallback(() => setIndex((i) => mod(i + 1, n)), [n]);
 
-  const goPrev = () => setIndex((i) => mod(i - 1, n));
-  const goNext = () => setIndex((i) => mod(i + 1, n));
-
-  // teclado ← →
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "ArrowLeft") goPrev();
@@ -31,10 +24,8 @@ export default function ProjectsCarousel({ projects }: { projects: Project[] }) 
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [n]);
+  }, [goNext, goPrev]);
 
-  // swipe simple
-  const startX = useRef<number | null>(null);
   const onStart = (x: number) => (startX.current = x);
   const onEnd = (x: number) => {
     if (startX.current == null) return;
@@ -43,6 +34,8 @@ export default function ProjectsCarousel({ projects }: { projects: Project[] }) 
     if (dx > 40) goPrev();
     if (dx < -40) goNext();
   };
+
+  if (!n) return null;
 
   const prev = mod(index - 1, n);
   const next = mod(index + 1, n);
@@ -73,13 +66,13 @@ export default function ProjectsCarousel({ projects }: { projects: Project[] }) 
               <div className={`relative ${isCenter ? "aspect-[16/9]" : "aspect-[16/10]"}`}>
                 {p.cover ? (
                   <Image
-                    src={urlFor(p.cover)
+                    src={urlFor(p.cover as unknown as SanityImageSource)
                       .width(isCenter ? 1200 : 800)
                       .height(isCenter ? 675 : 500)
                       .fit("crop")
                       .auto("format")
                       .url()}
-                    alt={p.cover?.alt || p.title}
+                    alt={(p as any).cover?.alt || p.title}
                     fill
                     sizes={isCenter ? "(max-width: 768px) 100vw, 640px" : "(max-width: 768px) 50vw, 320px"}
                     className="object-cover transition-transform duration-300 group-hover:scale-[1.02]"
@@ -90,7 +83,9 @@ export default function ProjectsCarousel({ projects }: { projects: Project[] }) 
               </div>
 
               <div className="p-4">
-                <h3 className={`font-semibold ${isCenter ? "text-lg" : "text-base"} text-zinc-800`}>{p.title}</h3>
+                <h3 className={`font-semibold ${isCenter ? "text-lg" : "text-base"} text-zinc-800`}>
+                  {p.title}
+                </h3>
                 {p.summary && <p className="text-sm text-zinc-600 line-clamp-2">{p.summary}</p>}
               </div>
             </Link>
@@ -124,7 +119,9 @@ export default function ProjectsCarousel({ projects }: { projects: Project[] }) 
               key={i}
               aria-label={`Ir al slide ${i + 1}`}
               onClick={() => setIndex(i)}
-              className={`h-2 rounded-full transition-all ${i === index ? "bg-yellow-300 w-6" : "bg-zinc-300 w-2 hover:bg-zinc-400"}`}
+              className={`h-2 rounded-full transition-all ${
+                i === index ? "bg-yellow-300 w-6" : "bg-zinc-300 w-2 hover:bg-zinc-400"
+              }`}
             />
           ))}
         </div>
