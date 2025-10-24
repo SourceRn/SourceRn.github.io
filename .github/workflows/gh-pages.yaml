@@ -2,13 +2,23 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ master ]   # usa la rama que tú emplees para producción
+    branches: [ master ]   
 
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+  
+env:
+  NEXT_PUBLIC_SANITY_PROJECT_ID: ${{ vars.NEXT_PUBLIC_SANITY_PROJECT_ID }}
+  NEXT_PUBLIC_SANITY_DATASET: ${{ vars.NEXT_PUBLIC_SANITY_DATASET }}
 
 jobs:
-  build-export-deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -23,14 +33,24 @@ jobs:
       - name: Install deps
         run: npm ci
 
-      - name: Build
+      - name: Build (webpack)
         run: npm run build
 
       - name: Export static
         run: npx next export
 
-      - name: Deploy to gh-pages branch
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          publish_dir: ./out
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          path: ./out
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
