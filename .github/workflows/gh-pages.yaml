@@ -12,7 +12,7 @@ permissions:
 concurrency:
   group: "pages"
   cancel-in-progress: true
-  
+
 env:
   NEXT_PUBLIC_SANITY_PROJECT_ID: ${{ vars.NEXT_PUBLIC_SANITY_PROJECT_ID }}
   NEXT_PUBLIC_SANITY_DATASET: ${{ vars.NEXT_PUBLIC_SANITY_DATASET }}
@@ -33,16 +33,13 @@ jobs:
       - name: Install deps
         run: npm ci
 
-      - name: Build (webpack)
+      - name: Build static site
         run: npm run build
-
-      - name: Export static
-        run: npx next export
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./out
+          path: .next/export
 
   deploy:
     needs: build
