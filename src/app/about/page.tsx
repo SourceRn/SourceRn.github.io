@@ -2,12 +2,20 @@ import { sanityClient } from "@/lib/sanity.client";
 import { profileQuery } from "@/lib/queries";
 import SanityImage from "@/components/sanityImage";
 import RichText from "@/components/RichText";
+import { Metadata } from "next";
 
 export const revalidate = 3600;
 
-export const metadata = {
+export const metadata : Metadata = {
   title: "Sobre mí",
   description: "Acerca de mi trabajo y experiencia",
+  alternates: {
+    canonical: "https://rammsesitic.dev/blog/",
+  },
+  openGraph: {
+    title: "Sobre Mí — Rammses ITIC",
+    url: "https://rammsesitic.dev/blog/",
+  },
 };
 
 export default async function AboutPage() {

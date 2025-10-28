@@ -4,12 +4,20 @@ import { sanityClient } from "@/lib/sanity.client";
 import { postsQuery } from "@/lib/queries";
 import { urlFor } from "@/lib/sanity.image";
 import type { Post } from "@/types/content";
+import { Metadata } from "next";
 
 export const revalidate = 60;
 
-export const metadata = {
+export const metadata : Metadata = {
   title: "Blog",
   description: "Artículos sobre desarrollo, arquitectura y nube",
+  alternates: {
+    canonical: "https://rammsesitic.dev/blog/",
+  },
+  openGraph: {
+    title: "Blog técnico — Rammses ITIC",
+    url: "https://rammsesitic.dev/blog/",
+  },
 };
 
 export default async function BlogPage() {

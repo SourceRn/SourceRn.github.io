@@ -4,12 +4,20 @@ import { sanityClient } from "@/lib/sanity.client";
 import { projectsQuery } from "@/lib/queries";
 import { urlFor } from "@/lib/sanity.image";
 import type { Project } from "@/types/content";
+import { Metadata } from "next";
 
 export const revalidate = 60;
 
-export const metadata = {
+export const metadata : Metadata = {
   title: "Proyectos",
   description: "Proyectos de desarrollo, arquitectura y nube",
+  alternates: {
+    canonical: "https://rammsesitic.dev/blog/",
+  },
+  openGraph: {
+    title: "Posts — Rammses ITIC",
+    url: "https://rammsesitic.dev/blog/",
+  },
 };
 
 export default async function ProjectsPage() {
