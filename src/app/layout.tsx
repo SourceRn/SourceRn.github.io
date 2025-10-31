@@ -12,20 +12,6 @@ export const metadata: Metadata = {
   description:
     "Portafolio técnico y blog de Rammses ITIC. Desarrollo web, arquitectura de software, análisis de código existente, redes y computación en la nube.",
 
-  keywords: [
-    "desarrollador web",
-    "desarrollo de software",
-    "arquitectura de software",
-    "cloud",
-    "cloud computing",
-    "infraestructura",
-    "Next.js",
-    "TypeScript",
-    "portafolio",
-    "blog técnico",
-    "Rammses ITIC",
-  ],
-
   authors: [{ name: "Rammses ITIC" }],
   creator: "Rammses ITIC",
   publisher: "Rammses ITIC",
