@@ -46,6 +46,7 @@ export default defineType({
           { title: "JSON", value: "json" },
           { title: "Bash", value: "bash" },
           { title: "python", value: "python" },
+          { title: "PowerShell", value: "powershell" },
         ],
       },
     },
